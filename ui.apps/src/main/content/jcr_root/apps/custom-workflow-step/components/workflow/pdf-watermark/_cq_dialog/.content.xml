@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="PDF Watermark Properties - Step Properties"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/tabs">
+        <items jcr:primaryType="nt:unstructured">
+            <common
+                    cq:hideOnEdit="true"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Common"
+                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"/>
+            <process
+                    cq:hideOnEdit="true"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Process"
+                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"/>
+            <processcommon
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Common"
+                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <basic
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <title
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            disabled="false"
+                                            fieldLabel="Title"
+                                            name="./jcr:title"/>
+                                    <description
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                            disabled="false"
+                                            fieldLabel="Description"
+                                            name="./jcr:description"/>
+                                </items>
+                            </basic>
+                            <advanced
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Advanced Settings"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <advance
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                            fieldDescription="Check if your handler will advance to the next step."
+                                            fieldLabel="Handler Advance"
+                                            name="./metaData/PROCESS_AUTO_ADVANCE"
+                                            text="Handler Advance"
+                                            value="true"/>
+                                </items>
+                            </advanced>
+                        </items>
+                    </column>
+                </items>
+            </processcommon>
+            <processargs
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Arguments"
+                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <arguments
+                                    jcr:primaryType="nt:unstructured"
+                                    jcr:title="Process Arguments"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <text
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldDescription="The watermark text to render."
+                                            fieldLabel="Text"
+                                            name="./metaData/text"/>
+                                    <font
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                            fieldDescription="The font family to use to render the watermark text in."
+                                            fieldLabel="Font"
+                                            name="./metaData/font">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <timesRoman
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Times Roman"
+                                                    value="Times Roman"/>
+                                            <timesRomanBold
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Times Roman Bold"
+                                                    value="Times Roman Bold"/>
+                                            <timesRomanItalic
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Times Roman Italic"
+                                                    value="Times Roman Italic"/>
+                                            <timesRomanBoldItalic
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Times Roman Bold Italic"
+                                                    value="Times Roman Bold Italic"/>
+                                            <helvetica
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Helvetica"
+                                                    value="Helvetica"/>
+                                            <helveticaBold
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Helvetica Bold"
+                                                    value="Helvetica Bold"/>
+                                            <helveticaOblique
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Helvetica Oblique"
+                                                    value="Helvetica Oblique"/>
+                                            <helveticaBoldOblique
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Helvetica Bold Oblique"
+                                                    value="Helvetica Bold Oblique"/>
+                                            <Courier
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Courier"
+                                                    value="Courier"/>
+                                            <CourierBold
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Courier Bold"
+                                                    value="Courier Bold"/>
+                                            <CourierOblique
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Courier Oblique"
+                                                    value="Courier Oblique"/>
+                                            <CourierBoldOblique
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Courier Bold Oblique"
+                                                    value="Courier Bold Oblique"/>
+                                        </items>
+                                    </font>
+                                    <size
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                            defaultValue="{Long}48"
+                                            fieldDescription="The font size of the watermark text in pixel."
+                                            fieldLabel="Size"
+                                            max="{Long}100"
+                                            min="{Long}10"
+                                            name="./metaData/size"
+                                            value="40"/>
+                                    <color
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"
+                                            fieldDescription="The font color of the watermark text."
+                                            fieldLabel="Color"
+                                            name="./metaData/color"/>
+                                    <opacity
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                            defaultValue="{Long}20"
+                                            fieldDescription="The opacity of the watermark in percentage."
+                                            fieldLabel="Opacity"
+                                            max="{Decimal}100"
+                                            min="{Decimal}0"
+                                            name="./metaData/opacity"
+                                            value="20"/>
+                                    <position
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                            fieldDescription="The position of the watermark relative to the asset image."
+                                            fieldLabel="Position"
+                                            name="./metaData/position"
+                                            value="Centre">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <topleft
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Top Left"
+                                                    value="TOP_LEFT"/>
+                                            <topright
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Top Right"
+                                                    value="TOP_RIGHT"/>
+                                            <center
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Centre"
+                                                    value="CENTER"/>
+                                            <bottomleft
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Bottom Left"
+                                                    value="BOTTOM_LEFT"/>
+                                            <bottomright
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Bottom Right"
+                                                    value="BOTTOM_RIGHT"/>
+                                        </items>
+                                    </position>
+                                    <orientation
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                            fieldDescription="The angle of rotation of the watermark (clockwise from 0 to 360 degrees)."
+                                            fieldLabel="Orientation"
+                                            max="{Decimal}360.0"
+                                            min="{Decimal}0.0"
+                                            name="./metaData/orientation"/>
+                                </items>
+                            </arguments>
+                        </items>
+                    </column>
+                </items>
+            </processargs>
+        </items>
+    </content>
+</jcr:root>
+
